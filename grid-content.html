@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS NATIVE GRID EXEMPLE</title>
+    <style>
+        main {
+            border: 1px solid black;
+            height: 80vh;
+            width: 80vw;
+        }
+        main > * {
+            background-color: #BBB;
+            border: 2px solid green;
+            margin: 0;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 33% 10% 10% auto;
+            grid-template-rows: 2fr 0.5fr 0.5fr 1fr 1fr;
+        }
+        main h1 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        main p:first-of-type {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        main p:nth-of-type(2) {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        main p:nth-of-type(3) {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        main div {
+            background-color: orange;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>This is the CSS Grid</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident quo accusantium odio repellat nisi sequi adipisci minima, tempora iste alias?</p>
+        <p>Earum nisi corporis quod obcaecati accusantium, quam esse illo aliquid impedit est inventore vitae mollitia quisquam ex. Incidunt, dolor ut?</p>
+        <p>Consectetur, unde nostrum eum similique neque ullam vel dolor voluptatem animi ad officia iste. Rerum odio veniam aspernatur ab cum.</p>
+        <div>
+            <a href="">BUY IT!</a>
+        </div>
+    </main>
+</body>
+</html>
